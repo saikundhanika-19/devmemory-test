@@ -22,5 +22,10 @@ jobs:
       - name: Run application
         run: python app.py
 
+      - name: Test failure
+        run: |
+          echo "ERROR: Database connection failed"
+          exit 1
+
       - name: Pipeline completed
         run: echo "DevMemory test pipeline completed successfully"
